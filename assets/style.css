@@ -1,0 +1,105 @@
+/* Imports */
+@font-face {
+    font-family: 'Red Hat Display';
+    src: url('./fonts/RedHatDisplay-VariableFont_wght.ttf');
+}
+@font-face {
+    font-family: 'Red Hat Display Extra Bold';
+    src: url('./fonts/static/RedHatDisplay-ExtraBold.ttf');
+}
+
+/* Global Variables */
+:root {
+    --primary: hsl(225, 100%, 94%);
+    --text: hsl(224, 23%, 55%);
+    --payment: hsl(245, 75%, 52%);
+    --subscription-plan: hsl(225, 100%, 98%);
+    --header: hsl(223, 47%, 23%);
+}
+
+/* Defaults */
+*, *::after, *::before {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body {
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    background-image: url(./images/pattern-background-desktop.svg);
+    background-repeat: no-repeat;
+    background-color: var(--primary);
+}
+
+/* Component */
+.component {
+    max-width: 400px;
+    width: 90%;
+    border-radius: 16px;
+    background-color: white;
+    overflow: hidden;
+}
+.component-hero {
+    width: 100%;
+}
+.main-container {
+    padding: 10%;
+    text-align: center;
+}
+.main-container * {
+    font-family: 'Red Hat Display';
+    color: var(--text);
+}
+.main-container > *:not(:last-child) {
+    margin-bottom: 16px;
+}
+.component-header {
+    font-family: 'Red Hat Display Extra Bold';
+    color: var(--header);
+}
+.subscription-plan {
+    display: flex;
+    padding: 20px;
+    border-radius: 16px;
+    align-items: center;
+    background-color: var(--subscription-plan);
+}
+.subscription-plan .text {
+    margin-left: 20px;
+    font-family: 'Red Hat Display Extra Bold';
+    color: var(--header);
+}
+.plan-cost {
+    display: block;
+}
+.change-button {
+    margin-left: auto;
+    color: var(--payment);
+}
+.change-button:hover,
+.change-button:focus {
+    filter: brightness(2);
+    text-decoration: none;
+}
+.payment-button,
+.order-cancel-button {
+    display: block;
+    font-family: 'Red Hat Display Extra Bold';
+    text-decoration: none;
+}
+.payment-button {
+    padding-block: 20px;
+    border-radius: 16px;
+    background-color: var(--payment);
+    box-shadow: 0 20px 10px hsla(245, 75%, 52%, 0.1);
+    color: white;
+}
+.payment-button:hover,
+.payment-button:focus {
+    filter: brightness(2);
+}
+.order-cancel-button:hover,
+.order-cancel-button:focus {
+    color: black;
+}
